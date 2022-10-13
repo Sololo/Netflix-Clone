@@ -8,7 +8,7 @@ html,body{
 
 .container{
     width: 100%;
-    max-width: 1242px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -63,6 +63,48 @@ header{
 
 .right-cont img{
     max-width: 40px;
+}
+
+/* Movies Section CSS */
+.movies-section{
+
+}
+
+.movies-section-heading{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.explore-nudge{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+
+.movies-section-heading:hover .explore-nudge{
+    display: inline-block;
+}
+
+.movies-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.movie-item{
+    width: 245px;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+
+.movie-item:hover{
+   transform:scale(1.3) ;
+   transition: transform linear 300ms;
 }
 
 /*RESPOMSIVE CSS*/
