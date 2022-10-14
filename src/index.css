@@ -17,7 +17,12 @@ html,body{
 }
 /* Header Css */
 header{
-   /*background-color: grey;*/
+   background-color: transparent;
+   position: fixed;
+   z-index: 100;
+   left: 0;
+   top: 0;
+   width: 100%;
 }
 
 .header-cont{
@@ -40,7 +45,6 @@ header{
     list-style: none;
     display: inline-flex;
     flex-direction: row;
-    /*display: none;*/
 }
 
 .nav-item{
@@ -118,19 +122,23 @@ header{
 }
 
 /* Banner Section */
+.banner-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+    padding-top: 80px;
+    position: relative;
+}
 .banner-content{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    min-height: 98vh;
-    /*padding-top: 70px;*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding-top: 70px;
+   
 }
 
 .banner_title{
-    color: black;
-    font-size: 78px;
+    color: white;
+    font-size: 84px;
     line-height: 1.1;
     margin: 0;
     margin-bottom: 16px;
@@ -141,15 +149,16 @@ header{
     font-size: 22px;
     font-weight: 700;
     line-height: 1.5;
-    color: black;
+    color: white;
 }
 
 .banner_overview{
-    max-width: 350px;
+    color: white;
     font-weight: 400;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     z-index: 10;
     line-height: 1.5;
+    max-width: 50%;
 }
 
 .action-buttons-cont{
@@ -165,15 +174,38 @@ header{
     margin-right: 11px;
     border-radius: 4px;
     display: flex;
+    align-items: center;
     flex-direction: row;
     font-size: 16px;
     font-weight: 700;
+    cursor:pointer;
     
+}
+
+.action-button:last-child{
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.banner_fadeBottom{
+    height: 120px;
+    background:linear-gradient(180deg,
+    transparent,
+    rgba(37, 37, 37,.61),
+    #141414
+    );
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /*RESPOMSIVE CSS*/
 @media (max-width:767px) {
     .main-nav{
         display: none;
+    }
+    .banner_overview, .banner_title{
+        max-width: 100%;
     }
 }
