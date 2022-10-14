@@ -23,6 +23,11 @@ header{
    left: 0;
    top: 0;
    width: 100%;
+   transition: all ease 600ms;
+}
+
+header.black-bg{
+    background-color: rgb(20, 20, 20);
 }
 
 .header-cont{
@@ -74,7 +79,7 @@ header{
 
 /* Movies Section CSS */
 .movies-section{
-
+        margin: 41px 0;
 }
 
 .movies-cont{
@@ -142,6 +147,7 @@ header{
     line-height: 1.1;
     margin: 0;
     margin-bottom: 16px;
+    max-width: 40;
 }
 
 .banner_info{
@@ -158,7 +164,7 @@ header{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     z-index: 10;
     line-height: 1.5;
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .action-buttons-cont{
@@ -205,7 +211,7 @@ header{
     .main-nav{
         display: none;
     }
-    .banner_overview, .banner_title{
+    .banner_overview, .banner_title {
         max-width: 100%;
     }
 }
