@@ -19,7 +19,7 @@ function fetchAndBuildAllSections() {
     .then(res => {
         const categories = res.genres;
         if (Array.isArray(categories) && categories.length) {
-            categories.slice(0,2).forEach(category => {
+            categories.forEach(category => {
                 fetchAndBuildMovieSection(
                     apiPaths.fetchMoviesList(category.id),
                     category
@@ -67,7 +67,7 @@ function buildMoviesSection(list, categoryName) {
     </div>
     `
 
-    console.log(moviesListHTML);
+    console.log(moviesSectionHTML);
 
     const div = document.createElement('div');
     div.className = "movies-section"

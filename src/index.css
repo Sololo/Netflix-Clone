@@ -12,6 +12,9 @@ html,body{
     margin: 0 auto;
 }
 
+*::-webkit-scrollbar{
+    display: none;
+}
 /* Header Css */
 header{
    /*background-color: grey;*/
@@ -30,7 +33,7 @@ header{
 }
 
 .header-brand{
-  max-width: 100px;  
+  max-width: 110px;  
 }
 
 .main-nav{
@@ -70,7 +73,11 @@ header{
 
 }
 
-.movies-section-heading{
+.movies-cont{
+
+} 
+
+.movie-section-heading{
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
@@ -93,6 +100,9 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .movie-item{
@@ -107,8 +117,62 @@ header{
    transition: transform linear 300ms;
 }
 
+/* Banner Section */
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 98vh;
+    /*padding-top: 70px;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner_title{
+    color: black;
+    font-size: 78px;
+    line-height: 1.1;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.banner_info{
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: black;
+}
+
+.banner_overview{
+    max-width: 350px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+    z-index: 10;
+    line-height: 1.5;
+}
+
+.action-buttons-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.action-button{
+    border: none;
+    background-color: white; 
+    padding: 8px 23px;
+    margin-right: 11px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+
 /*RESPOMSIVE CSS*/
-@media (max-width: 767px) {
+@media (max-width:767px) {
     .main-nav{
         display: none;
     }
