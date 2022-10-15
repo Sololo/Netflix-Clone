@@ -7,6 +7,7 @@ const apiPaths = {
     fetchAllCategories: `${apiEndpoint}/genre/movie/list?api_key=${apikey}`,
     fetchMoviesList: (id) => `${apiEndpoint}/discover/movie?api_key=${apikey}&with_genres=${id}`,
     fetchTrending:`${apiEndpoint}/trending/all/day?api_key=${apikey}&language=en-US`,
+    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyAzWevyi4wpD_0o-0dLXcQXaYT1fuoQxKM`
 }
 
 //Boots up the app 
@@ -86,8 +87,10 @@ function buildMoviesSection(list, categoryName) {
 
     const moviesListHTML = list.map(item =>{
         return `
-        <img class= "movie-item" src="${imgPath}${item.backdrop_path}" alt="${item.title}">
-        `;
+        <div class = "movie-item" onmouseover="searchMovieTrailer('${item.title}', 'yt${item.id}')">
+            <img class= "movie-item-img " src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+            <iframe width="45" height="150" src="" id="yt${item.id}"></iframe>
+        </div>`;
     }).join('');
 
     const moviesSectionHTML = `
@@ -107,6 +110,21 @@ function buildMoviesSection(list, categoryName) {
 
     // append html into movies container
     moviesCont.append(div);
+}
+
+function searchMovieTrailer(movieName, iframeId) {
+    if (!movieName) return;
+
+    fetch (apiPaths.searchOnYoutube(movieName))
+    .then(res => res.json())
+    .then(res =>{
+        const bestResult = res.items[0];
+        const youtubeUrl = `https://www.youtube.com/watch?v=${bestResult.id.videoId}`;
+        console.log(youtubeUrl);
+        const elements = document.getElementById(iframeId);
+        elements.src = `https://www.youtube.com/embed/${bestResult.id.videoId}?autoplay=1&controls=0`;
+    })
+    .catch(err => console.log(err));
 }
 
 window.addEventListener('load', function() {
