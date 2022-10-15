@@ -8,7 +8,7 @@ html,body{
 
 .container{
     width: 100%;
-    max-width: 1250px;
+    max-width: 1525px;
     margin: 0 auto;
 }
 
@@ -102,7 +102,7 @@ header.black-bg{
     display: none;
 }
 
-.movies-section-heading:hover .explore-nudge{
+.movie-section-heading:hover .explore-nudge{
     display: inline-block;
 }
 
