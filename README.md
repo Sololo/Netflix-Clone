@@ -10,5 +10,5 @@ This project is a front end clone of Netflix created for the purpose of learning
 ## Guide
 | Function | Description |
 | :---------- | :---------- |
-| Nav bar and Banner | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15%20(1).png )|
-| Movie Sections | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15.png) |
+| Nav bar and Banner | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15.png) |
+| Movie Sections | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15%20(1).png ) |
