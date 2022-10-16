@@ -8,7 +8,7 @@ This project is a front end clone of Netflix created for the purpose of learning
 * JavaScript
 
 ## Guide
-| Function | Description |
+| Function | Display |
 | :---------- | :---------- |
 | Nav bar and Banner | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15.png) |
 | Movie Sections | ![preview](https://github.com/Karabo-Dikolomela/Netflix-Clone/blob/main/images/2022-10-15%20(1).png ) |
