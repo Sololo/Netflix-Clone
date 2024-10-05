@@ -6,7 +6,6 @@ This project is a front end clone of Netflix created for the purpose of learning
 * HTML
 * CSS
 * JavaScript
-* JavaScript (GitHub fork)
 
 ## Guide
 | Function | Display |
